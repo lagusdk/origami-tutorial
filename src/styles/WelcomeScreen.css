@@ -1,0 +1,98 @@
+.welcome-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-image: url("/assets/FoldingBirding-Background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.welcome-content {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  object-fit: contain;
+  margin-top: 8rem;
+  padding: 10rem;
+  /* 이미지 넣고 패딩 없애야 할듯 */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(8px);
+}
+
+.description {
+  font-size: 1.125rem;
+  color: white;
+  line-height: 1.75;
+}
+
+.start-button {
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.start-button:hover {
+  background-color: #a6a2cc;
+  transform: translateY(-2px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.start-button:active {
+  transform: translateY(0);
+}
+
+.start-button::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+
+.start-button:hover::after {
+  transform: scale(1);
+}
+
+/* iPad Pro 11" 비율에 맞는 반응형 조정 */
+@media (max-aspect-ratio: 178.5/247.6) {
+  .welcome-content {
+    max-width: 90vw;
+    padding: 2rem;
+  }
+
+  .logo {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,27 @@
+.step-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.step-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.step-dot--current {
+  background-color: #4f46e5;
+  transform: scale(1.25);
+}
+
+.step-dot--completed {
+  background-color: #a5b4fc;
+}
+
+.step-dot--pending {
+  background-color: #d1d5db;
+}

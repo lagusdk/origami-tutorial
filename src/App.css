@@ -1,0 +1,59 @@
+:root {
+  --ipad-width: 178.5mm;
+  --ipad-height: 247.6mm;
+  --ipad-ratio: calc(178.5 / 247.6);
+  --scale-factor: 1;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  touch-action: none;
+  background-color: #fff;
+}
+
+.app-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* 스크롤 방지 */
+  background: #fefefe;
+}
+
+.app-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(var(--ipad-width) * var(--scale-factor));
+  height: calc(var(--ipad-height) * var(--scale-factor));
+  max-width: 100vw;
+  max-height: 100vh;
+  aspect-ratio: var(--ipad-ratio);
+  background: #fefefe;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* iPad Pro 11" 가로/세로 모드 대응 */
+@media (orientation: portrait) {
+  .app-container {
+    width: calc(100vh * var(--ipad-ratio));
+    height: 100vh;
+  }
+}
+
+@media (orientation: landscape) {
+  .app-container {
+    width: 100vw;
+    height: calc(100vw / var(--ipad-ratio));
+  }
+}
