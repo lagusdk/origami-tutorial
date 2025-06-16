@@ -14,10 +14,10 @@
   "dependencies": {
     "@react-three/drei": "^10.2.0",
     "@react-three/fiber": "^9.1.2",
-    "@types/three": "^0.177.0",
     "gh-pages": "^6.3.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-transition-group": "^4.4.5",
     "swiper": "^11.2.8",
     "three": "^0.177.0",
     "three-stdlib": "^2.36.0"
@@ -26,6 +26,8 @@
     "@eslint/js": "^9.25.0",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
+    "@types/react-transition-group": "^4.4.12",
+    "@types/three": "^0.177.0",
     "@vitejs/plugin-react-swc": "^3.9.0",
     "eslint": "^9.25.0",
     "eslint-plugin-react-hooks": "^5.2.0",

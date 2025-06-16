@@ -5,9 +5,10 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
+    "baseUrl": ".",
     "typeRoots": ["node_modules/@types", "src/types"],
     "paths": {
-      "three/examples/jsm/*": ["node_modules/three/examples/jsm/*"]
+      "three/examples/jsm/*": ["./node_modules/three/examples/jsm/*"]
     }
   }
 }

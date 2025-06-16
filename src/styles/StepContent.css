@@ -1,0 +1,50 @@
+/* StepContent 안의 텍스트 정렬 정리 */
+.step-description-box {
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.step-description {
+  color: #6b7280;
+  max-width: 32rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* 스크롤 제거 */
+body,
+html,
+.tutorial-guide,
+.tutorial-content,
+.step-main-content,
+.step-content {
+  overflow: hidden;
+}
+
+.model-viewer-container {
+  position: relative; /* 팝업 위치 기준 */
+  width: 100%;
+  height: 400px; /* 적절한 높이 설정 */
+}
+
+.diagram-popup {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 200px; /* 적절한 크기 조정 */
+  height: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  padding: 8px;
+}
+
+.diagram-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}

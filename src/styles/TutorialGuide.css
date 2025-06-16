@@ -1,3 +1,4 @@
+/* 기본 레이아웃 스타일 */
 .tutorial-guide {
   height: 100%;
   display: flex;
@@ -17,62 +18,118 @@
   flex: 1;
   position: relative;
   min-height: 0;
-}
-
-.next-step-button {
-  background-color: #4f46e5;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.next-step-button:hover {
-  background-color: #4338ca;
-}
-
-.tutorial-content {
   height: calc(100vh - 80px);
-  position: relative;
+}
+
+.tutorial-content.step-welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tutorial-swiper {
   height: 100%;
 }
 
+/* 공통 스텝 스타일 */
 .tutorial-step {
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 20px;
+}
+
+.step-top-section {
+  margin-bottom: 30px;
+}
+
+.step-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.step-navigation {
+  position: relative;
+  height: 50px; /* 원하는 높이로 조절 */
+}
+
+.step-indicator-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.next-step-button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #4f46e5;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .step-header {
   margin-bottom: 1rem;
 }
 
-.step-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #1f2937;
-  margin-bottom: 0.5rem;
-}
-
 .step-description {
-  color: #6b7280;
+  color: black;
   max-width: 32rem;
   margin: 0 auto;
+}
+
+.welcome-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 0;
+}
+
+.welcome-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #4f46e5;
+}
+
+.welcome-description {
+  font-size: 1.2rem;
+  color: black;
+  max-width: 500px;
+}
+
+/* 1~6단계 스타일 */
+.step-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .step-content {
   flex: 1;
   min-height: 0;
   position: relative;
-  border: 1px solid #eee;
+  border-radius: 8px;
 }
 
+.model-viewer-container {
+  flex: 1;
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+/* 도면 관련 스타일 */
 .diagram-container {
   width: 100%;
   height: 100%;
@@ -81,14 +138,106 @@
   align-items: center;
 }
 
+.diagram-popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
 .diagram-image {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 90%;
+  max-height: 90%;
   object-fit: contain;
+}
+
+/* 버튼 스타일 */
+.next-step-button {
+  background-color: #4f46e5;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.next-step-button:hover {
+  background-color: #4338ca;
 }
 
 .diagram-button-container {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
+}
+
+.diagram-toggle-button {
+  align-self: flex-start;
+  background: #4f46e5;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.close-diagram-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* 설명 박스 스타일 */
+.step-description-box {
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* 슬라이드 래퍼 및 슬라이더 */
+.tutorial-slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.tutorial-slider {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  height: 100%;
+  width: 100%;
+}
+
+.tutorial-slide {
+  flex: 0 0 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.step-title,
+.step-description {
+  text-align: center;
+}
+
+/* 스크롤 없애기 */
+body,
+html,
+.tutorial-guide {
+  overflow: hidden;
 }
