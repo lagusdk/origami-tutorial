@@ -42,7 +42,7 @@ const OBJLoaderWrapper: React.FC<OBJLoaderWrapperProps> = ({
     }
   }, [fbxUrl]);
 
-  useFrame((state, delta) => {
+  useFrame((_, delta) => {
     mixerRef.current?.update(delta);
   });
 

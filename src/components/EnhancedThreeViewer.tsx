@@ -58,8 +58,8 @@ const EnhancedThreeViewer: React.FC<EnhancedThreeViewerProps> = ({
   }
 
   return (
-    <div style={{ width: "100%", height: "100%", border: "1px solid red" }}>
-      <Canvas>
+    <div ref={containerRef} style={{ width: "100%", height: "100%" }}>
+      <Canvas style={{ width: dimensions.width, height: dimensions.height }}>
         <Suspense fallback={<Loader />}>
           <ambientLight intensity={0.6} />
           <directionalLight position={[10, 10, 5]} intensity={0.8} />

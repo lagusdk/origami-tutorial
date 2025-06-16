@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import StepIndicator from "../components/StepIndicator";
@@ -69,7 +69,7 @@ interface TutorialStepProps {
   isActive: boolean;
 }
 
-const TutorialStep: React.FC<TutorialStepProps> = ({ stepData, isActive }) => {
+const TutorialStep: React.FC<TutorialStepProps> = ({ stepData }) => {
   const [showDiagram, setShowDiagram] = useState(false);
 
   return (
