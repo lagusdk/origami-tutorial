@@ -19,12 +19,7 @@
 
 .logo {
   object-fit: contain;
-  margin-top: 8rem;
-  padding: 10rem;
-  /* 이미지 넣고 패딩 없애야 할듯 */
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  backdrop-filter: blur(8px);
+  transform: scale(0.8);
 }
 
 .description {

@@ -11,7 +11,7 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
       <div className="welcome-content">
         <div className="logo-container">
           <img
-            src="/assets/FordingBirding-Logo.png"
+            src="public\assets\FoldingBirding-Logo.png"
             alt="FordingBirding Logo"
             className="logo"
           />

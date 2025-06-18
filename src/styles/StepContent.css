@@ -48,3 +48,33 @@ html,
   display: block;
   border-radius: 4px;
 }
+
+.substep-nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.substep-nav-button:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.substep-nav-button.left {
+  left: 20px;
+}
+
+.substep-nav-button.right {
+  right: 20px;
+}

@@ -10,9 +10,11 @@ const StepIndicator: React.FC<StepIndicatorProps> = ({
   currentStep,
   totalSteps,
 }) => {
+  const stepCount = totalSteps - 1;
+
   return (
     <div className="step-indicator">
-      {Array.from({ length: totalSteps }, (_, index) => (
+      {Array.from({ length: stepCount }, (_, index) => (
         <div
           key={index}
           className={`step-dot ${

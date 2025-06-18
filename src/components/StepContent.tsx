@@ -1,5 +1,5 @@
 import React from "react";
-import ThreeViewer from "../components/ThreeViewer";
+import OBJMTLViewer from "./OBJMTLViewer";
 import "../styles/StepContent.css";
 
 interface StepContentProps {
@@ -12,9 +12,22 @@ interface StepContentProps {
     title: string;
   };
   showDiagram: boolean;
+  hasSubSteps?: boolean;
+  currentSubStep?: number;
+  subStepCount?: number;
+  onPrevSubStep?: () => void;
+  onNextSubStep?: () => void;
 }
 
-const StepContent: React.FC<StepContentProps> = ({ stepData, showDiagram }) => {
+const StepContent: React.FC<StepContentProps> = ({
+  stepData,
+  showDiagram,
+  hasSubSteps,
+  currentSubStep = 0,
+  subStepCount = 0,
+  onPrevSubStep,
+  onNextSubStep,
+}) => {
   if (!stepData.objFile) {
     return (
       <div className="step-content">
@@ -27,11 +40,29 @@ const StepContent: React.FC<StepContentProps> = ({ stepData, showDiagram }) => {
     <div className="step-content">
       {/* 3D 뷰어는 항상 표시 */}
       <div className="model-viewer-container">
-        <ThreeViewer
-          objFile={stepData.objFile!}
-          mtlFile={stepData.mtlFile}
-          fbxFile={stepData.fbxFile}
-        />
+        <OBJMTLViewer objPath={stepData.objFile} mtlPath={stepData.mtlFile} />
+
+        {/* 서브스텝 네비게이션 화살표 */}
+        {hasSubSteps && (
+          <>
+            {currentSubStep > 0 && (
+              <button
+                className="substep-nav-button left"
+                onClick={onPrevSubStep}
+              >
+                &lt;
+              </button>
+            )}
+            {currentSubStep < subStepCount - 1 && (
+              <button
+                className="substep-nav-button right"
+                onClick={onNextSubStep}
+              >
+                &gt;
+              </button>
+            )}
+          </>
+        )}
 
         {/* 도면 팝업 (showDiagram이 true일 때만 표시) */}
         {showDiagram && stepData.diagramFile && (
