@@ -43,10 +43,8 @@
 }
 
 .step-title {
-  font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 15px;
-  color: #333;
 }
 
 .step-navigation {
@@ -60,20 +58,6 @@
   transform: translateX(-50%);
   top: 50%;
   transform: translate(-50%, -50%);
-}
-
-.next-step-button {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #4f46e5;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.2rem;
 }
 
 .step-header {
@@ -119,8 +103,10 @@
 
 /* 1~6단계 스타일 */
 .step-main-content {
-  flex: 1;
   display: flex;
+  height: 100vh;
+  justify-content: center; /* 가로 중앙 */
+  align-items: center; /* 세로 중앙 */
   flex-direction: column;
 }
 
@@ -168,17 +154,16 @@
 
 /* 버튼 스타일 */
 .next-step-button {
-  background-color: #4f46e5;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
   color: white;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  font-size: 2rem;
   transition: background-color 0.3s ease;
-}
-
-.next-step-button:hover {
-  background-color: #4338ca;
 }
 
 .diagram-button-container {
@@ -213,22 +198,23 @@
 
 .step-title {
   text-align: center;
-  padding-top: 1rem;
   font-size: 2.5rem;
+  color: white;
 }
 
 .step-description {
   text-align: center;
   font-size: 1.5rem;
+  color: white;
 }
 
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  background-color: rgba(30, 30, 30, 0.6); /* 좀 더 어두운 반투명 배경 */
+  background-color: rgba(30, 30, 30, 0.8); /* 좀 더 어두운 반투명 배경 */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -236,9 +222,9 @@
 }
 
 .modal-content {
-  background: #fff; /* 흰색 배경 */
-  width: 90%;
-  max-width: 420px;
+  background: #fffefb; /* 흰색 배경 */
+  width: 100%;
+  max-width: 800px;
   border-radius: 14px;
   padding: 2.5rem 2rem 2rem 2rem;
   box-sizing: border-box;
@@ -249,7 +235,6 @@
 
 .modal-title {
   font-size: 1.3rem;
-  font-weight: 700;
   margin-bottom: 1.5rem;
   color: #2c3e50; /* 짙은 청색 계열 */
 }
@@ -270,7 +255,7 @@
 
 .modal-buttons {
   display: flex;
-  gap: 15px;
+  gap: 30px;
   justify-content: center;
 }
 

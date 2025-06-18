@@ -16,7 +16,7 @@ const stepData = [
   {
     title: "Step1. 삼각형 접기",
     description:
-      "정사각형 색종이를 한쪽 대각선 방향으로 반 접어 삼각형을 만들고\n다시 반대 방향 대각선으로도 반 접어주어\n삼각형을 만들어 줍니다.",
+      "정사각형 색종이를 한쪽 대각선 방향으로 반 접어 삼각형을 만들고\n다시 반대 방향 대각선으로도 반 접어주어 삼각형을 만들어 줍니다.",
     objFile: "/assets/obj/object1.obj",
     mtlFile: "/assets/mtl/material1.mtl",
     diagramFile: "/assets/diagram/diagram1.png",
@@ -28,7 +28,7 @@ const stepData = [
       {
         title: "Step2-1",
         description:
-          "접어놓은 삼각형의 양쪽 모서리를 중앙선에 맞춰 접어\n마름모 모양을 만듭니다.",
+          "접어놓은 삼각형의 양쪽 모서리를 중앙선에 맞춰 접어 마름모 모양을 만듭니다.",
         objFile: "/assets/obj/object2-1.obj",
         mtlFile: "/assets/mtl/material2-1.mtl",
         diagramFile: "/assets/diagram/diagram2-1.png",
@@ -36,7 +36,7 @@ const stepData = [
       {
         title: "Step2-2",
         description:
-          "그 다음, 중앙선을 기준으로 다시 반 접어\n작은 삼각형을 만들어 주세요.",
+          "그 다음, 중앙선을 기준으로 다시 반 접어 작은 삼각형을 만들어 주세요.",
         objFile: "/assets/obj/object2-2.obj",
         mtlFile: "/assets/mtl/material2-2.mtl",
         diagramFile: "/assets/diagram/diagram2-2.png",
@@ -50,7 +50,7 @@ const stepData = [
       {
         title: "Step3-1",
         description:
-          "종이를 역삼각형 방향으로 놓고\n윗부분의 꼭짓점을 아래 중앙선에 맞춰 접었다가 다시 펼칩니다.\n아래 꼭짓점도 윗쪽 가장자리까지 반 접고 다시 펼칩니다.",
+          "종이를 역삼각형 방향으로 놓고\n종이 윗부분의 꼭짓점을 아래 중앙선에 맞춰 접었다가 다시 펼칩니다.\n아래 꼭짓점도 윗쪽 가장자리까지 반 접고 다시 펼칩니다.",
         objFile: "/assets/obj/object3-1.obj",
         mtlFile: "/assets/mtl/material3-1.mtl",
         diagramFile: "/assets/diagram/diagram3-1.png",
@@ -87,7 +87,7 @@ const stepData = [
       {
         title: "Step4-3",
         description:
-          "종이를 뒤집고, 반대쪽도 같은 방식으로 접어 올립니다. 양쪽 모두 접으면, 종이 전체가 배처럼 생긴 모양이 됩니다.",
+          "종이를 뒤집고, 반대쪽도 같은 방식으로 접어 올립니다.\n양쪽 모두 접으면, 종이 전체가 배처럼 생긴 모양이 됩니다.",
         objFile: "/assets/obj/object4-3.obj",
         mtlFile: "/assets/mtl/material4-3.mtl",
         diagramFile: "/assets/diagram/diagram4-3.png",
@@ -98,7 +98,7 @@ const stepData = [
   {
     title: "Step5. 날개 만들기",
     description:
-      "종이의 벌려지는 부분 선을 따라 펼치며 새의 날개 모양을 만들어 줍니다. 그리고 종이를 뒤집고, 반대쪽도 같은 방식으로 펼쳐 접어 줍니다.",
+      "종이의 벌려지는 부분 선을 따라 펼치며 새의 날개 모양을 만들어 줍니다.\n그리고 종이를 뒤집고, 반대쪽도 같은 방식으로 펼쳐 접어 줍니다.",
     objFile: "/assets/obj/object5.obj",
     mtlFile: "/assets/mtl/material5.mtl",
     diagramFile: "/assets/diagram/diagram5.png",
@@ -107,7 +107,7 @@ const stepData = [
   {
     title: "Step6. 머리 만들기",
     description:
-      "앞쪽 끝 부분을 보이는 선에 맞춰 아래 방향으로 눌러 접어줍니다. 부리처럼 뾰족하게 내려오며, 새의 머리 모양이 완성됩니다.",
+      "앞쪽 끝 부분을 보이는 선에 맞춰 아래 방향으로 눌러 접어줍니다.\n부리처럼 뾰족하게 내려오며, 새의 머리 모양이 완성됩니다.",
     objFile: "/assets/obj/object6.obj",
     mtlFile: "/assets/mtl/material6.mtl",
     diagramFile: "/assets/diagram/diagram6.png",
@@ -126,7 +126,7 @@ const stepData = [
       {
         title: "Step7-2",
         description:
-          "종이를 살짝 펼쳐 접힌 선에 따라 파란색 영역을 위쪽으로 올려 접어 꼬리 모양을 만들어 줍니다.",
+          "종이를 살짝 펼쳐 접힌 선에 따라 파란색 영역을 위쪽으로 올려 접어\n꼬리 모양을 만들어 줍니다.",
         objFile: "/assets/obj/object7-2.obj",
         mtlFile: "/assets/mtl/material7-2.mtl",
         diagramFile: "/assets/diagram/diagram7-2.png",
@@ -194,7 +194,7 @@ const TutorialGuide: React.FC<TutorialGuideProps> = ({
     setShowModal(false);
   };
 
-  // 모달 "다 했어요" 클릭 -> 꾸미기 화면으로 전환 (예시: 페이지 전환 함수 호출)
+  // 모달 "다 했어요" 클릭 -> 꾸미기 화면으로 전환
   const navigateToDecorate = () => {
     onFinish();
   };
@@ -285,7 +285,7 @@ const TutorialGuide: React.FC<TutorialGuideProps> = ({
               onClick={handleNextButtonClick}
               className="next-step-button"
             >
-              다음 단계
+              다음 단계 &gt;
             </button>
           )}
         </div>
