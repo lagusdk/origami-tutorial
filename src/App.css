@@ -9,6 +9,9 @@
 * {
   font-family: "Paperlogy-8ExtraBold";
   overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE10+ */
 }
 
 :root {
