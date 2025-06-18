@@ -1,28 +1,3 @@
-/* StepContent 안의 텍스트 정렬 정리 */
-.step-description-box {
-  padding: 20px;
-  border-radius: 8px;
-  margin-top: 20px;
-  text-align: center;
-}
-
-.step-description {
-  color: #6b7280;
-  max-width: 32rem;
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* 스크롤 제거 */
-body,
-html,
-.tutorial-guide,
-.tutorial-content,
-.step-main-content,
-.step-content {
-  overflow: hidden;
-}
-
 .model-viewer-container {
   position: relative; /* 팝업 위치 기준 */
   width: 100%;

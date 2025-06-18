@@ -3,10 +3,12 @@ import "./App.css";
 
 import WelcomeScreen from "./pages/WelcomeScreen";
 import TutorialGuide from "./pages/TutorialGuide";
+import BirdDecoration from "./pages/BirdDecoration";
 
 function App() {
-  const [started, setStarted] = useState(false);
-
+  const [currentPage, setCurrentPage] = useState<
+    "welcome" | "tutorial" | "decorate"
+  >("welcome");
   const clickSound = new Audio("/assets/sounds/userinterface-32114.mp3");
 
   useEffect(() => {
@@ -62,10 +64,18 @@ function App() {
 
   return (
     <div className="app-container">
-      {started ? (
-        <TutorialGuide />
-      ) : (
-        <WelcomeScreen onStart={() => setStarted(true)} />
+      {currentPage === "welcome" && (
+        <WelcomeScreen onStart={() => setCurrentPage("tutorial")} />
+      )}
+      {currentPage === "tutorial" && (
+        <TutorialGuide onFinish={() => setCurrentPage("decorate")} />
+      )}
+      {currentPage === "decorate" && (
+        <BirdDecoration
+          onNext={() => {
+            setCurrentPage("welcome");
+          }}
+        />
       )}
     </div>
   );

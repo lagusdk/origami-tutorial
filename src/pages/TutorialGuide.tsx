@@ -136,7 +136,13 @@ const stepData = [
   },
 ];
 
-const TutorialGuide: React.FC = () => {
+interface TutorialGuideProps {
+  onFinish: () => void; // 페이지 전환 콜백
+}
+
+const TutorialGuide: React.FC<TutorialGuideProps> = ({
+  onFinish = () => {},
+}) => {
   const [currentStep, setCurrentStep] = useState({
     mainStep: 0,
     subStep: 0,
@@ -190,8 +196,7 @@ const TutorialGuide: React.FC = () => {
 
   // 모달 "다 했어요" 클릭 -> 꾸미기 화면으로 전환 (예시: 페이지 전환 함수 호출)
   const navigateToDecorate = () => {
-    // TODO: 꾸미기 페이지로 전환 구현 (라우터 사용 시 history.push 등)
-    alert("꾸미기 단계로 이동합니다!");
+    onFinish();
   };
 
   const handleNextStep = () => {
@@ -326,54 +331,22 @@ const TutorialGuide: React.FC = () => {
 
       {/* 모달 */}
       {showModal && (
-        <div
-          className="modal-overlay"
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100vw",
-            height: "100vh",
-            backgroundColor: "rgba(0,0,0,0.5)",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            zIndex: 9999,
-          }}
-        >
-          <div
-            className="modal-content"
-            style={{
-              backgroundColor: "white",
-              width: "50vw",
-              height: "50vh",
-              borderRadius: "12px",
-              padding: "2rem",
-              boxSizing: "border-box",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              textAlign: "center",
-            }}
-          >
-            <h2 style={{ fontSize: "1.8rem", marginBottom: "1rem" }}>
-              종이접기를 완료하셨나요?
-            </h2>
-            <p style={{ fontSize: "1.1rem", marginBottom: "2rem" }}>
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <h2 className="modal-title">종이접기를 완료하셨나요?</h2>
+            <p className="modal-description">
               이제 꾸미기 단계로 넘어갈 수 있어요.
             </p>
 
-            <div
-              style={{ display: "flex", justifyContent: "center", gap: "1rem" }}
-            >
+            <div className="modal-buttons">
               <button
-                style={{ flex: 1, padding: "0.8rem", fontSize: "1rem" }}
+                className="modal-button cancel"
                 onClick={handleModalCancel}
               >
                 아직이에요
               </button>
               <button
-                style={{ flex: 1, padding: "0.8rem", fontSize: "1rem" }}
+                className="modal-button confirm"
                 onClick={navigateToDecorate}
               >
                 다 했어요
