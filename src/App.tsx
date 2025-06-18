@@ -1,15 +1,20 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import "./App.css";
 
 import WelcomeScreen from "./pages/WelcomeScreen";
 import TutorialGuide from "./pages/TutorialGuide";
 import BirdDecoration from "./pages/BirdDecoration";
+import ScanLoading from "./pages/ScanLoading";
 
 function App() {
   const [currentPage, setCurrentPage] = useState<
-    "welcome" | "tutorial" | "decorate"
+    "welcome" | "tutorial" | "decorate" | "loading"
   >("welcome");
-  const clickSound = new Audio("/assets/sounds/userinterface-32114.mp3");
+
+  const clickSound = useMemo(
+    () => new Audio("/assets/sounds/userinterface-32114.mp3"),
+    []
+  );
 
   useEffect(() => {
     // 윈도우 리사이즈 핸들러
@@ -73,10 +78,11 @@ function App() {
       {currentPage === "decorate" && (
         <BirdDecoration
           onNext={() => {
-            setCurrentPage("welcome");
+            setCurrentPage("loading");
           }}
         />
       )}
+      {currentPage === "loading" && <ScanLoading />}
     </div>
   );
 }

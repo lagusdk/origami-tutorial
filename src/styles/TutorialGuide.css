@@ -70,6 +70,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 1.2rem;
 }
 
 .step-header {
@@ -85,7 +86,7 @@
 
 .step-description {
   color: black;
-  max-width: 32rem;
+  max-width: 64rem;
   margin: 0 auto;
   text-align: center;
   font-size: 1.2rem;
@@ -102,13 +103,13 @@
 }
 
 .welcome-title {
-  font-size: 1.8rem;
+  font-size: 3rem;
   margin-bottom: 20px;
   color: #4f46e5;
 }
 
 .welcome-description {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: black;
   max-width: 500px;
 }
@@ -207,16 +208,15 @@
   cursor: pointer;
 }
 
-/* 설명 박스 스타일 */
-.step-description-box {
-  padding: 20px;
-  border-radius: 8px;
-  margin-top: 20px;
+.step-title {
+  text-align: center;
+  padding-top: 1rem;
+  font-size: 2.5rem;
 }
 
-.step-title,
 .step-description {
   text-align: center;
+  font-size: 1.5rem;
 }
 
 .modal-overlay {
@@ -252,14 +252,14 @@
 }
 
 .modal-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 1rem;
   color: #34495e; /* 중간 톤 청색 */
 }
 
 .modal-description {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
   color: #555;
   line-height: 1.5;

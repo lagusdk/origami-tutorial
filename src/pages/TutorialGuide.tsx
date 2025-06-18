@@ -7,7 +7,7 @@ const stepData = [
   {
     title: "Step0. 준비하기",
     description:
-      "종이접기를 시작해볼까요? 총 7단계로 진행돼요. 원하는 각도로 새를 둘러볼 수 있어요.",
+      "종이접기를 시작해볼까요?\n총 7단계로 진행돼요.\n원하는 각도로 새를 둘러볼 수 있어요.",
     objFile: null,
     mtlFile: null,
     diagramFile: null,
@@ -16,7 +16,7 @@ const stepData = [
   {
     title: "Step1. 삼각형 접기",
     description:
-      "정사각형 색종이를 한쪽 대각선 방향으로 반 접어 삼각형을 만들고 다시 반대 방향 대각선으로도 반 접어주어 삼각형을 만들어 줍니다.",
+      "정사각형 색종이를 한쪽 대각선 방향으로 반 접어 삼각형을 만들고\n다시 반대 방향 대각선으로도 반 접어주어\n삼각형을 만들어 줍니다.",
     objFile: "/assets/obj/object1.obj",
     mtlFile: "/assets/mtl/material1.mtl",
     diagramFile: "/assets/diagram/diagram1.png",
@@ -28,7 +28,7 @@ const stepData = [
       {
         title: "Step2-1",
         description:
-          "접어놓은 삼각형의 양쪽 모서리를 중앙선에 맞춰 접어 마름모 모양을 만듭니다.",
+          "접어놓은 삼각형의 양쪽 모서리를 중앙선에 맞춰 접어\n마름모 모양을 만듭니다.",
         objFile: "/assets/obj/object2-1.obj",
         mtlFile: "/assets/mtl/material2-1.mtl",
         diagramFile: "/assets/diagram/diagram2-1.png",
@@ -36,7 +36,7 @@ const stepData = [
       {
         title: "Step2-2",
         description:
-          "그 다음, 중앙선을 기준으로 다시 반 접어 작은 삼각형을 만들어 주세요.",
+          "그 다음, 중앙선을 기준으로 다시 반 접어\n작은 삼각형을 만들어 주세요.",
         objFile: "/assets/obj/object2-2.obj",
         mtlFile: "/assets/mtl/material2-2.mtl",
         diagramFile: "/assets/diagram/diagram2-2.png",
@@ -50,7 +50,7 @@ const stepData = [
       {
         title: "Step3-1",
         description:
-          "종이를 역삼각형 방향으로 놓고 윗부분의 꼭짓점을 아래 중앙선에 맞춰 접었다가 다시 펼칩니다. 아래 꼭짓점도 윗쪽 가장자리까지 반 접고 다시 펼칩니다.",
+          "종이를 역삼각형 방향으로 놓고\n윗부분의 꼭짓점을 아래 중앙선에 맞춰 접었다가 다시 펼칩니다.\n아래 꼭짓점도 윗쪽 가장자리까지 반 접고 다시 펼칩니다.",
         objFile: "/assets/obj/object3-1.obj",
         mtlFile: "/assets/mtl/material3-1.mtl",
         diagramFile: "/assets/diagram/diagram3-1.png",
@@ -58,7 +58,7 @@ const stepData = [
       {
         title: "Step3-2",
         description:
-          "종이를 뒤집은 뒤, 반대쪽도 같은 방식으로 접었다가 펼칩니다. 이 과정을 통해 몸통을 접기 위한 기준선이 만들어집니다.",
+          "종이를 뒤집은 뒤, 반대쪽도 같은 방식으로 접었다가 펼칩니다.\n이 과정을 통해 몸통을 접기 위한 기준선이 만들어집니다.",
         objFile: "/assets/obj/object3-2.obj",
         mtlFile: "/assets/mtl/material3-2.mtl",
         diagramFile: "/assets/diagram/diagram3-2.png",
@@ -324,7 +324,14 @@ const TutorialGuide: React.FC<TutorialGuideProps> = ({
         ) : (
           <div className="welcome-content">
             <h1 className="welcome-title">종이접기를 시작해볼까요?</h1>
-            <p className="welcome-description">{currentData.description}</p>
+            <p className="welcome-description">
+              {currentData.description?.split("\n").map((line, idx) => (
+                <React.Fragment key={idx}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}
+            </p>
           </div>
         )}
       </div>

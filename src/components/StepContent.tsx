@@ -77,7 +77,14 @@ const StepContent: React.FC<StepContentProps> = ({
       </div>
 
       <div className="step-description-box">
-        <p className="step-description">{stepData.description}</p>
+        <p className="step-description">
+          {stepData.description.split("\n").map((line, idx) => (
+            <React.Fragment key={idx}>
+              {line}
+              <br />
+            </React.Fragment>
+          ))}
+        </p>
       </div>
     </div>
   );

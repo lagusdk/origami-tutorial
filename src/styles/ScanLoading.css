@@ -1,0 +1,85 @@
+.scan-loading-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scene-content {
+  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.scene-content p {
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 0.5s;
+  margin-bottom: 1.2rem;
+}
+
+.scene-content p.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.scene-content img {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  display: block;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.scene-button {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.scene-button:hover {
+  background-color: #0056b3;
+}
+
+/* 줄간격 줄이기 */
+p.compress span {
+  display: block;
+  line-height: 1.3rem;
+}
+
+p.tighten span {
+  display: block;
+  line-height: 1.5rem;
+}
+
+/* 모달창 스타일 */
+.scene-content.modal,
+.modal {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+/* 애니메이션 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

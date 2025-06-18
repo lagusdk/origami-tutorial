@@ -46,17 +46,12 @@ const OBJModel: React.FC<OBJMTLViewerProps> = ({ objPath, mtlPath }) => {
         (object) => {
           // 모델 크기 자동 조정
           const box = new THREE.Box3().setFromObject(object);
-          // const size = box.getSize(new THREE.Vector3()).length();
           const center = box.getCenter(new THREE.Vector3());
 
           // 모델 위치 조정 (중심으로 이동)
           object.position.x -= center.x;
           object.position.y -= center.y;
           object.position.z -= center.z;
-
-          // // 모델 크기 조정 (0.5배로 축소)
-          // const scale = 0.5 / size;
-          // object.scale.set(scale, scale, scale);
 
           setModel(object);
           console.log("obj ok");
@@ -75,7 +70,10 @@ const OBJModel: React.FC<OBJMTLViewerProps> = ({ objPath, mtlPath }) => {
 const OBJMTLViewer: React.FC<OBJMTLViewerProps> = ({ objPath, mtlPath }) => {
   return (
     <div style={{ width: "100%", height: "100%" }}>
-      <Canvas camera={{ position: [0, -5, 60], fov: 60 }}>
+      <Canvas
+        key={objPath + mtlPath} // key를 통해 obj/mtl이 바뀌면 전체 Canvas 재생성
+        camera={{ position: [0, -5, 60], fov: 60 }}
+      >
         <ambientLight intensity={0.8} />
         <directionalLight position={[5, 5, 5]} intensity={1} />
         <Suspense fallback={<Loader />}>
