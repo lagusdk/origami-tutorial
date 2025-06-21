@@ -201,7 +201,7 @@
 }
 
 .modal-button.next {
-  background-color: #4c51bf;
+  background-color: #247f46;
   color: white;
   width: 100%;
   font-size: 1.2rem;
@@ -210,5 +210,5 @@
 }
 
 .modal-button.next:hover {
-  background-color: #4c51bf;
+  background-color: #69ae81;
 }
