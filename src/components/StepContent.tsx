@@ -1,12 +1,14 @@
 import React from "react";
-import OBJMTLViewer from "./OBJMTLViewer";
+// import OBJMTLViewer from "./OBJMTLViewer";
+import GLBViewer from "./GLBViewer";
 import "../styles/StepContent.css";
 
 interface StepContentProps {
   stepData: {
-    objFile: string | null;
-    mtlFile: string;
-    fbxFile?: string;
+    // objFile: string | null;
+    // mtlFile: string;
+    // fbxFile?: string;
+    glbFile: string;
     diagramFile: string | null;
     description: string;
     title: string;
@@ -17,6 +19,7 @@ interface StepContentProps {
   subStepCount?: number;
   onPrevSubStep?: () => void;
   onNextSubStep?: () => void;
+  currentStep?: { mainStep: number };
 }
 
 const StepContent: React.FC<StepContentProps> = ({
@@ -27,8 +30,9 @@ const StepContent: React.FC<StepContentProps> = ({
   subStepCount = 0,
   onPrevSubStep,
   onNextSubStep,
+  currentStep = { mainStep: 0 },
 }) => {
-  if (!stepData.objFile) {
+  if (!stepData.glbFile) {
     return (
       <div className="step-content">
         <div className="placeholder">준비 중...</div>
@@ -40,7 +44,11 @@ const StepContent: React.FC<StepContentProps> = ({
     <div className="step-content">
       {/* 3D 뷰어는 항상 표시 */}
       <div className="model-viewer-container">
-        <OBJMTLViewer objPath={stepData.objFile} mtlPath={stepData.mtlFile} />
+        {/* <OBJMTLViewer objPath={stepData.objFile} mtlPath={stepData.mtlFile} /> */}
+        <GLBViewer
+          glbPath={stepData.glbFile}
+          stepIndex={currentStep.mainStep}
+        />
 
         {/* 서브스텝 네비게이션 화살표 */}
         {hasSubSteps && (

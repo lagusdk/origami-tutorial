@@ -153,6 +153,19 @@
 }
 
 /* 버튼 스타일 */
+.prev-step-button {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 2rem;
+  transition: background-color 0.3s ease;
+}
+
 .next-step-button {
   position: absolute;
   right: 0;
@@ -272,25 +285,24 @@
 }
 
 .modal-button.cancel {
-  background-color: #e0e0e0;
-  color: #444;
+  background-color: #247f46;
+  color: white;
 }
 
 .modal-button.cancel:hover {
-  background-color: #cfcfcf;
+  background-color: #69ae81;
 }
-
 .modal-button.confirm {
-  background-color: #e0e0e0; /* 부드러운 보라-청색 */
-  color: 444;
+  background-color: #f59e08;
+  color: white;
 }
 
 .modal-button.confirm:hover {
-  background-color: #cfcfcf;
+  background-color: #ddaa52;
 }
 
 .modal-button.next {
-  background-color: #5a67d8;
+  background-color: #247f46;
   color: white;
   width: 100%;
   font-weight: 700;
@@ -299,5 +311,5 @@
 }
 
 .modal-button.next:hover {
-  background-color: #4c51bf;
+  background-color: #69ae81;
 }

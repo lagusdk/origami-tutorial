@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/WelcomeScreen.css";
+import GLBViewer from "../components/GLBViewer-copy";
 
 type WelcomeScreenProps = {
   onStart: () => void;
@@ -37,11 +38,9 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
               <br />
               원하는 각도로 종이 새를 돌려볼 수 있어요.
             </p>
-            <img
-              src="/assets/paper-bird.png"
-              alt="종이새"
-              className="bird-image"
-            />
+            <div className="bird-3d-container">
+              <GLBViewer glbPath="/assets/glb/welcome-bird.glb" />
+            </div>
             <button onClick={onStart} className="next-button">
               다음 단계로 &gt;
             </button>

@@ -14,10 +14,17 @@
   -ms-user-select: none; /* IE10+ */
 }
 
-:root {
+/* :root {
   --ipad-width: 178.5mm;
   --ipad-height: 247.6mm;
   --ipad-ratio: calc(178.5 / 247.6);
+  --scale-factor: 1;
+} */
+
+:root {
+  --ipad-width: 2360px;
+  --ipad-height: 1640px;
+  --ipad-ratio: calc(2360 / 1640); /* 1.439... */
   --scale-factor: 1;
 }
 

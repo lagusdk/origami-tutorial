@@ -1,3 +1,10 @@
+.scan-loading-container:not(.first-page) {
+  background-image: url("/assets/ScanLoading-Background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .scan-loading-container {
   width: 100vw;
   height: 100vh;
@@ -11,6 +18,8 @@
   text-align: center;
   max-width: 800px;
   padding: 20px;
+  color: #2c3e50;
+  z-index: 10;
 }
 
 .scene-content p {
@@ -33,23 +42,27 @@
   margin: 20px auto;
   display: block;
   opacity: 0;
+  z-index: 10;
+
   animation: fadeIn 1s ease-in forwards;
 }
 
 .scene-button {
   margin-top: 30px;
   padding: 12px 24px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   border: none;
   border-radius: 8px;
-  background-color: #007bff;
+  background-color: #247f46;
   color: white;
   cursor: pointer;
+  z-index: 10;
+
   animation: fadeIn 1s ease-in forwards;
 }
 
 .scene-button:hover {
-  background-color: #0056b3;
+  background-color: #247f46;
 }
 
 /* 줄간격 줄이기 */
@@ -60,16 +73,42 @@ p.compress span {
 
 p.tighten span {
   display: block;
-  line-height: 1.5rem;
+  line-height: 1.3rem;
 }
 
 /* 모달창 스타일 */
-.scene-content.modal,
 .modal {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: #fffefb;
   padding: 40px;
   border-radius: 12px;
   margin-top: 20px;
+  color: #2c3e50;
+  z-index: 10;
+  width: 20rem;
+}
+
+/* 모달 타입 페이지에 적용될 검은색 반투명 레이어 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 모달 내용 스타일 강조 */
+.scene-content.modal {
+  position: relative;
+  z-index: 20;
+  background-color: #fffefb;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* 애니메이션 */

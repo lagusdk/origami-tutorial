@@ -29,6 +29,7 @@ const scenesByPage: Scene[][] = [
       button: "좋아요",
       noFade: true,
       waitForClick: true,
+      tightenParagraph: true,
     },
   ],
 
@@ -36,7 +37,8 @@ const scenesByPage: Scene[][] = [
   [
     {
       type: "text",
-      lines: ["나는... 새가 되고 싶었다", "하늘을 나는 새가."],
+      lines: ["나는... 새가 되고 싶었어", "하늘을 나는 새가."],
+      tightenParagraph: true,
       spacing: "wide",
     },
   ],
@@ -45,13 +47,20 @@ const scenesByPage: Scene[][] = [
   [
     {
       type: "text",
-      lines: [
-        "알록달록한 새와는 거리가 먼 하얀 종이로 태어났지만,",
-        "언젠가는 파란 하늘을,",
-        "푸르른 숲속을,",
-        "울창한 나뭇가지 사이를",
-        "날아다닐 수 있으리라 믿었다.",
-      ],
+      lines: ["알록달록한 새와는 거리가 먼 하얀 종이로 태어났지만,"],
+      tightenParagraph: true,
+      spacing: "normal",
+    },
+    {
+      type: "text",
+      lines: ["언젠가는 파란 하늘을,", "푸르른 숲속을,"],
+      tightenParagraph: true,
+      spacing: "normal",
+    },
+    {
+      type: "text",
+      lines: ["울창한 나뭇가지 사이를", "날아다닐 수 있으리라 믿었어."],
+      tightenParagraph: true,
       spacing: "normal",
     },
   ],
@@ -61,18 +70,20 @@ const scenesByPage: Scene[][] = [
     {
       type: "text",
       lines: ["그러던 어느 날"],
+      tightenParagraph: true,
       spacing: "normal",
     },
-    {
-      type: "image",
-      lines: [],
-      image: "/assets/FoldingBirding-Logo.png",
-      imageDelay: true,
-      spacing: "wide",
-    },
+    // {
+    //   type: "image",
+    //   lines: [],
+    //   image: "/assets/FoldingBirding-Logo.png",
+    //   imageDelay: true,
+    //   spacing: "wide",
+    // },
     {
       type: "text",
-      lines: ["XREAL 폴딩버딩 팀을 만났다"],
+      lines: ["XREAL에 있는 'FOLDING BIRDING' 팀을 만났어!"],
+      tightenParagraph: true,
       spacing: "normal",
     },
   ],
@@ -81,9 +92,14 @@ const scenesByPage: Scene[][] = [
   [
     {
       type: "text",
+      lines: ["그들은 내게 속삭였어."],
+      tightenParagraph: true,
+      spacing: "normal",
+    },
+    {
+      type: "text",
       lines: [
-        "그들은 내게 속삭였다.",
-        "“머지않아 누군가의 손길이 닿으면,\n넌 예쁜 숲속을 자유롭게 날아다니는 새가 될 거야.\n우리가 꼭 그렇게 만들어 줄게.”",
+        "“머지않아 누군가의 손길이 닿으면,\n넌 예쁜 숲속을 자유롭게 날아다니는 새가 될 거야.\n우리가 꼭 그렇게 만들어 줄게!”",
       ],
       tightenQuote: false,
       spacing: "wide",
@@ -94,32 +110,25 @@ const scenesByPage: Scene[][] = [
   [
     {
       type: "text",
-      lines: ["정말일까?"],
-      spacing: "normal",
-    },
-    {
-      type: "text",
       lines: [
-        "정말 종이였던 내가",
-        "누군가의 손길로 접히고",
-        "알록달록 예쁘게 꾸며진 뒤",
-        "하늘을 날아다니는 새가 될 수 있을까?",
+        "그렇게 FOLDING BIRDING 팀은",
+        "나를 위해 밤낮 쉬지 않고 개발에 매진해줬어",
       ],
       tightenParagraph: true,
       spacing: "normal",
     },
+    {
+      type: "text",
+      lines: ["그리고 너도 나를 이렇게 예쁘게 만들어줬지!", "그렇게 해서..."],
+      tightenParagraph: true,
+      spacing: "normal",
+    },
   ],
-
   // 7페이지
   [
     {
-      type: "text",
-      lines: ["폴딩버딩 팀은 밤낮 쉬지 않고 개발에 매진했다.", "그리하여..."],
-      spacing: "wide",
-    },
-    {
       type: "modal",
-      lines: ["척추에 변화 감지.", "날개가 돋아나는 중입니다."],
+      lines: ["척추에 변화 감지.", "날개가 돋아나는 중입니다..."],
       button: "확인",
     },
   ],
@@ -135,10 +144,15 @@ const scenesByPage: Scene[][] = [
     {
       type: "text",
       lines: [
-        "폴딩버딩 팀의 말이, 내 꿈이, 현실이 될지도 몰라.",
+        "FOLDING BIRDING 팀의 말이, 내 꿈이, 현실이 될지도 몰라.",
         "방금 내가 느낀 따스한 손길...",
-        "나를 이리 저리 접어주던 그 손길 덕분에!",
       ],
+      tightenParagraph: true,
+      spacing: "normal",
+    },
+    {
+      type: "text",
+      lines: ["나를 이리 저리 접어주던 그 손길 덕분에!"],
       tightenParagraph: true,
       spacing: "normal",
     },
@@ -153,23 +167,23 @@ const scenesByPage: Scene[][] = [
     },
   ],
 
-  // 10페이지
-  [
-    {
-      type: "text",
-      lines: [
-        "너의 손길로 탄생한 내가",
-        "날개를 달고 나는 모습을 지켜봐 줘.",
-        "나랑 함께 숲속을 돌아다니자!",
-      ],
-      spacing: "wide",
-    },
-    {
-      type: "modal",
-      lines: ["새의 메시지가 종료되었습니다."],
-      button: "확인",
-    },
-  ],
+  // // 10페이지
+  // [
+  //   {
+  //     type: "text",
+  //     lines: [
+  //       "너의 손길로 탄생한 내가",
+  //       "날개를 달고 나는 모습을 지켜봐 줘.",
+  //       "나랑 함께 숲속을 돌아다니자!",
+  //     ],
+  //     spacing: "wide",
+  //   },
+  //   {
+  //     type: "modal",
+  //     lines: ["새의 메시지가 종료되었습니다."],
+  //     button: "확인",
+  //   },
+  // ],
 
   // 11페이지
   [
@@ -349,7 +363,14 @@ const ScanLoading = () => {
   }, [currentElementIndex, pageIndex]);
 
   return (
-    <div className="scan-loading-container">
+    <div
+      className={`scan-loading-container ${
+        pageIndex === 0 ? "first-page" : ""
+      }`}
+    >
+      {currentPageElements.some((scene) => scene.type === "modal") && (
+        <div className="modal-overlay" />
+      )}
       <div className={`scene-content ${isPageFadingOut ? "fade-out" : ""}`}>
         {currentPageElements.map((scene, idx) => (
           <div

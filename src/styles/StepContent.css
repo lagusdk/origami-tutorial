@@ -1,6 +1,6 @@
 .model-viewer-container {
   width: 1000px;
-  height: 500px; /* 적절한 높이 설정 */
+  height: 300px; /* 적절한 높이 설정 */
 
   /* 둥근 모서리와 테두리 */
   border: 2px solid white;
@@ -33,22 +33,18 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.7);
+  background: transparent;
+  color: white;
   border: none;
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  font-size: 20px;
+  font-size: 60px;
   cursor: pointer;
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.substep-nav-button:hover {
-  background: rgba(255, 255, 255, 0.9);
 }
 
 .substep-nav-button.left {
