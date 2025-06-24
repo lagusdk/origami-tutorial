@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background-image: url("/assets/OrigamiTutorial-Background.png");
+  background-image: url("/assets/TutorialGuide-Background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -12,9 +12,31 @@
 
 .tutorial-header {
   flex-shrink: 0;
-  padding: 1rem;
   background-color: transparent;
   z-index: 10;
+  padding: 1rem 2rem;
+}
+
+.step-title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  transform-origin: right top;
+  font-size: 2.5rem;
+  color: white;
+  text-align: right;
+  padding-right: 5rem;
+}
+
+.step-navigation {
+  position: relative;
+  height: 50px;
+}
+
+.step-indicator-wrapper {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translate(-50%, 0);
 }
 
 .tutorial-content {
@@ -24,83 +46,6 @@
   height: calc(100vh - 80px);
 }
 
-.tutorial-content.step-welcome {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* 공통 스텝 스타일 */
-.tutorial-step {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-}
-
-.step-top-section {
-  margin-bottom: 30px;
-}
-
-.step-title {
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.step-navigation {
-  position: relative;
-  height: 50px; /* 원하는 높이로 조절 */
-}
-
-.step-indicator-wrapper {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.step-header {
-  margin-bottom: 1rem;
-}
-
-.step-description-box {
-  padding: 20px;
-  border-radius: 8px;
-  margin-top: 20px;
-  text-align: center;
-}
-
-.step-description {
-  color: black;
-  max-width: 64rem;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-.welcome-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 0;
-}
-
-.welcome-title {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  color: #4f46e5;
-}
-
-.welcome-description {
-  font-size: 1.5rem;
-  color: black;
-  max-width: 500px;
-}
-
 /* 1~6단계 스타일 */
 .step-main-content {
   display: flex;
@@ -108,6 +53,9 @@
   justify-content: center; /* 가로 중앙 */
   align-items: center; /* 세로 중앙 */
   flex-direction: column;
+  position: relative;
+  z-index: 10;
+  transform: translateY(-7.5rem);
 }
 
 .step-content {
@@ -124,101 +72,37 @@
   overflow: hidden;
 }
 
-/* 도면 관련 스타일 */
-.diagram-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.diagram-popup {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-}
-
-.diagram-image {
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: contain;
-}
-
 /* 버튼 스타일 */
 .prev-step-button {
   position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 3.6rem;
   background: transparent;
   color: white;
-  padding: 10px 20px;
   border: none;
-  font-size: 2rem;
+  font-size: 1.8rem;
   transition: background-color 0.3s ease;
 }
 
 .next-step-button {
   position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  right: 3.6rem;
   background: transparent;
   color: white;
-  padding: 10px 20px;
   border: none;
-  font-size: 2rem;
+  font-size: 1.8rem;
   transition: background-color 0.3s ease;
 }
 
-.diagram-button-container {
+/* 하단 고정 버튼 래퍼 */
+.step-prev-next-button {
   position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-}
+  bottom: 6.2rem;
 
-.diagram-toggle-button {
-  align-self: flex-start;
-  background: #4f46e5;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 20px;
-}
-
-.close-diagram-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: #ff4444;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-}
-
-.step-title {
-  text-align: center;
-  font-size: 2.5rem;
-  color: white;
-}
-
-.step-description {
-  text-align: center;
-  font-size: 1.5rem;
-  color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  z-index: 20;
 }
 
 .modal-overlay {
@@ -227,61 +111,66 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(30, 30, 30, 0.8); /* 좀 더 어두운 반투명 배경 */
+  background-color: rgba(30, 30, 30, 0.6); /* 좀 더 어두운 반투명 배경 */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
+  gap: 1rem;
+  z-index: 9999 !important;
 }
 
 .modal-content {
   background: #fffefb; /* 흰색 배경 */
   width: 100%;
-  max-width: 800px;
-  border-radius: 14px;
-  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 60%;
+  border-radius: 9px;
+  padding: 2rem 6rem;
   box-sizing: border-box;
   text-align: center;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* 좀 더 부드러운 그림자 */
   color: #222;
+  z-index: 9999;
 }
 
 .modal-title {
-  font-size: 1.3rem;
-  margin-bottom: 1.5rem;
+  font-size: 2rem;
   color: #2c3e50; /* 짙은 청색 계열 */
+  z-index: 9999;
 }
 
 .modal-subtitle {
   font-size: 1.8rem;
   font-weight: 600;
-  margin-bottom: 1rem;
   color: #34495e; /* 중간 톤 청색 */
+  z-index: 9999;
 }
 
 .modal-description {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
   color: #555;
-  line-height: 1.5;
+  /* line-height: 1.5; */
+  z-index: 9999;
+  transform: translateY(-10%);
 }
 
 .modal-buttons {
   display: flex;
-  gap: 30px;
+  gap: 4rem;
   justify-content: center;
+  z-index: 9999;
 }
 
 .modal-button {
   flex: 1;
-  padding: 12px 0;
+  padding: 0.8rem 0;
   font-size: 1.1rem;
   font-weight: 600;
-  border-radius: 8px;
+  border-radius: 9px;
   border: none;
   cursor: pointer;
   transition: background-color 0.25s ease, color 0.25s ease;
   user-select: none;
+  z-index: 9999;
 }
 
 .modal-button.cancel {
@@ -289,16 +178,9 @@
   color: white;
 }
 
-.modal-button.cancel:hover {
-  background-color: #69ae81;
-}
 .modal-button.confirm {
   background-color: #f59e08;
   color: white;
-}
-
-.modal-button.confirm:hover {
-  background-color: #ddaa52;
 }
 
 .modal-button.next {
@@ -306,10 +188,15 @@
   color: white;
   width: 100%;
   font-weight: 700;
-  padding: 14px 0;
   border-radius: 8px;
 }
 
+.modal-button.cancel:hover,
+.modal-button.confirm:hover,
 .modal-button.next:hover {
-  background-color: #69ae81;
+  color: white;
+  transform: scale(1.05); /* 5% 커짐 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 약간 그림자 추가 */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
 }

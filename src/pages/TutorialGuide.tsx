@@ -8,10 +8,8 @@ const stepData = [
     title: "Step1. 삼각형 접기",
     description:
       "정사각형 색종이를 한쪽 대각선 방향으로 반 접어 삼각형을 만들고\n다시 반대 방향 대각선으로도 반 접어주어 삼각형을 만들어 줍니다.",
-    // objFile: "/assets/obj/object1.obj",
-    // mtlFile: "/assets/mtl/material1.mtl",
     glbFile: "/assets/glb/1st-folding.glb",
-    diagramFile: "/assets/diagram/diagram1.png",
+    planFile: "/assets/plan/plan1.png",
     hasSubSteps: false,
   },
   {
@@ -20,22 +18,18 @@ const stepData = [
       {
         title: "Step2-1",
         description:
-          "접어놓은 삼각형의 양쪽 모서리를 중앙선에 맞춰 접어 마름모 모양을 만듭니다.",
-        // objFile: "/assets/obj/object2-1.obj",
-        // mtlFile: "/assets/mtl/material2-1.mtl",
+          "접어놓은 삼각형의 양쪽 모서리를\n중앙선에 맞춰 접어 마름모 모양을 만듭니다.",
         glbFile: "/assets/glb/2nd-folding.glb",
 
-        diagramFile: "/assets/diagram/diagram2-1.png",
+        planFile: "/assets/plan/plan2-1.png",
       },
       {
         title: "Step2-2",
         description:
-          "그 다음, 중앙선을 기준으로 다시 반 접어 작은 삼각형을 만들어 주세요.",
-        // objFile: "/assets/obj/object2-2.obj",
-        // mtlFile: "/assets/mtl/material2-2.mtl",
+          "그 다음, 중앙선을 기준으로 다시 반 접어\n작은 삼각형을 만들어 주세요.",
         glbFile: "/assets/glb/2nd-folding.glb",
 
-        diagramFile: "/assets/diagram/diagram2-2.png",
+        planFile: "/assets/plan/plan2-2.png",
       },
     ],
     hasSubSteps: true,
@@ -46,22 +40,16 @@ const stepData = [
       {
         title: "Step3-1",
         description:
-          "종이를 역삼각형 방향으로 놓고\n종이 윗부분의 꼭짓점을 아래 중앙선에 맞춰 접었다가 다시 펼칩니다.\n아래 꼭짓점도 윗쪽 가장자리까지 반 접고 다시 펼칩니다.",
-        // objFile: "/assets/obj/object3-1.obj",
-        // mtlFile: "/assets/mtl/material3-1.mtl",
+          "종이를 역삼각형 방향으로 놓고 종이 윗부분의 꼭짓점을 아래 중앙선에 맞춰\n접었다가 다시 펼칩니다. 아래 꼭짓점도 윗쪽 가장자리까지 반 접고 다시 펼칩니다.",
         glbFile: "/assets/glb/3rd-folding.glb",
-
-        diagramFile: "/assets/diagram/diagram3-1.png",
+        planFile: "/assets/plan/plan3-1.png",
       },
       {
         title: "Step3-2",
         description:
           "종이를 뒤집은 뒤, 반대쪽도 같은 방식으로 접었다가 펼칩니다.\n이 과정을 통해 몸통을 접기 위한 기준선이 만들어집니다.",
-        // objFile: "/assets/obj/object3-2.obj",
-        // mtlFile: "/assets/mtl/material3-2.mtl",
         glbFile: "/assets/glb/3rd-folding.glb",
-
-        diagramFile: "/assets/diagram/diagram3-2.png",
+        planFile: "/assets/plan/plan3-2.png",
       },
     ],
     hasSubSteps: true,
@@ -73,30 +61,22 @@ const stepData = [
         title: "Step4-1",
         description:
           "종이의 위쪽을 살짝 벌려 펼치면, 앞에서 만든 접힌 선이 안쪽에 보입니다.",
-        // objFile: "/assets/obj/object4-1.obj",
-        // mtlFile: "/assets/mtl/material4-1.mtl",
         glbFile: "/assets/glb/4th-folding.glb",
-
-        diagramFile: "/assets/diagram/diagram4-1.png",
+        planFile: "/assets/plan/plan4-1.png",
       },
       {
         title: "Step4-2",
         description: "접힌 선을 따라, 주황색 영역을 위로 접어 올려 주세요.",
-        // objFile: "/assets/obj/object4-2.obj",
-        // mtlFile: "/assets/mtl/material4-2.mtl",
         glbFile: "/assets/glb/4th-folding.glb",
 
-        diagramFile: "/assets/diagram/diagram4-2.png",
+        planFile: "/assets/plan/plan4-2.png",
       },
       {
         title: "Step4-3",
         description:
           "종이를 뒤집고, 반대쪽도 같은 방식으로 접어 올립니다.\n양쪽 모두 접으면, 종이 전체가 배처럼 생긴 모양이 됩니다.",
-        // objFile: "/assets/obj/object4-3.obj",
-        // mtlFile: "/assets/mtl/material4-3.mtl",
         glbFile: "/assets/glb/4th-folding.glb",
-
-        diagramFile: "/assets/diagram/diagram4-3.png",
+        planFile: "/assets/plan/plan4-3.png",
       },
     ],
     hasSubSteps: true,
@@ -105,22 +85,18 @@ const stepData = [
     title: "Step5. 날개 만들기",
     description:
       "종이의 벌려지는 부분 선을 따라 펼치며 새의 날개 모양을 만들어 줍니다.\n그리고 종이를 뒤집고, 반대쪽도 같은 방식으로 펼쳐 접어 줍니다.",
-    // objFile: "/assets/obj/object5.obj",
-    // mtlFile: "/assets/mtl/material5.mtl",
     glbFile: "/assets/glb/5th-folding.glb",
 
-    diagramFile: "/assets/diagram/diagram5.png",
+    planFile: "/assets/plan/plan5.png",
     hasSubSteps: false,
   },
   {
     title: "Step6. 머리 만들기",
     description:
       "앞쪽 끝 부분을 보이는 선에 맞춰 아래 방향으로 눌러 접어줍니다.\n부리처럼 뾰족하게 내려오며, 새의 머리 모양이 완성됩니다.",
-    // objFile: "/assets/obj/object6.obj",
-    // mtlFile: "/assets/mtl/material6.mtl",
     glbFile: "/assets/glb/6th-folding.glb",
 
-    diagramFile: "/assets/diagram/diagram6.png",
+    planFile: "/assets/plan/plan6.png",
     hasSubSteps: false,
   },
   {
@@ -129,21 +105,17 @@ const stepData = [
       {
         title: "Step7-1",
         description: "새 몸통의 중심선에 맞춰 종이를 접었다가 펼쳐 주세요.",
-        // objFile: "/assets/obj/object7-1.obj",
-        // mtlFile: "/assets/mtl/material7-1.mtl",
         glbFile: "/assets/glb/7th-folding.glb",
 
-        diagramFile: "/assets/diagram/diagram7-1.png",
+        planFile: "/assets/plan/plan7-1.png",
       },
       {
         title: "Step7-2",
         description:
           "종이를 살짝 펼쳐 접힌 선에 따라 파란색 영역을 위쪽으로 올려 접어\n꼬리 모양을 만들어 줍니다.",
-        // objFile: "/assets/obj/object7-2.obj",
-        // mtlFile: "/assets/mtl/material7-2.mtl",
         glbFile: "/assets/glb/7th-folding.glb",
 
-        diagramFile: "/assets/diagram/diagram7-2.png",
+        planFile: "/assets/plan/plan7-2.png",
       },
     ],
     hasSubSteps: true,
@@ -161,7 +133,7 @@ const TutorialGuide: React.FC<TutorialGuideProps> = ({
     mainStep: 0,
     subStep: 0,
   });
-  const [showDiagram, setShowDiagram] = useState(false);
+  const [showPlan, setShowPlan] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
   // 현재 스텝 데이터 가져오기
@@ -245,7 +217,7 @@ const TutorialGuide: React.FC<TutorialGuideProps> = ({
       });
     }
 
-    setShowDiagram(false); // 도면 닫기
+    setShowPlan(false); // 도면 닫기
   };
 
   const handleNextStep = () => {
@@ -276,7 +248,7 @@ const TutorialGuide: React.FC<TutorialGuideProps> = ({
       });
     }
 
-    setShowDiagram(false);
+    setShowPlan(false);
   };
 
   const handlePrevSubStep = () => {
@@ -334,7 +306,6 @@ const TutorialGuide: React.FC<TutorialGuideProps> = ({
   return (
     <div className="tutorial-guide">
       <div className="tutorial-header">
-        <h2 className="step-title">{currentData.mainTitle}</h2>
         <div className="step-navigation">
           <div className="step-indicator-wrapper">
             <StepIndicator
@@ -342,45 +313,20 @@ const TutorialGuide: React.FC<TutorialGuideProps> = ({
               totalSteps={stepData.length}
             />
           </div>
-
-          {shouldShowPrevButton() && !showModal && (
-            <button onClick={handlePrevStep} className="prev-step-button">
-              &lt; 이전 단계
-            </button>
-          )}
-
-          {/* 모달이 열리면 버튼 숨기기 */}
-          {shouldShowNextButton() && !showModal && (
-            <button
-              onClick={handleNextButtonClick}
-              className="next-step-button"
-            >
-              다음 단계 &gt;
-            </button>
-          )}
         </div>
+        <h2 className="step-title">{currentData.mainTitle}</h2>
       </div>
-
-      <div className={`tutorial-content  }`}>
-        {currentData.glbFile ? (
+      <div className={`tutorial-content`}>
+        {currentData.glbFile && (
           <div className="step-main-content">
-            <button
-              onClick={() => setShowDiagram(!showDiagram)}
-              className="diagram-toggle-button"
-            >
-              {showDiagram ? "도면 닫기" : "도면 보기"}
-            </button>
-
             <StepContent
               stepData={{
                 title: currentData.mainTitle,
                 description: currentData.description,
-                // objFile: currentData.objFile,
-                // mtlFile: currentData.mtlFile,
                 glbFile: currentData.glbFile,
-                diagramFile: currentData.diagramFile,
+                planFile: currentData.planFile,
               }}
-              showDiagram={showDiagram}
+              showPlan={showPlan}
               hasSubSteps={currentData.hasSubSteps}
               currentSubStep={currentData.currentSubStep}
               subStepCount={currentData.subStepCount}
@@ -388,18 +334,22 @@ const TutorialGuide: React.FC<TutorialGuideProps> = ({
               onNextSubStep={handleNextSubStep}
               currentStep={currentStep}
             />
-          </div>
-        ) : (
-          <div className="welcome-content">
-            <h1 className="welcome-title">종이접기를 시작해볼까요?</h1>
-            <p className="welcome-description">
-              {currentData.description?.split("\n").map((line, idx) => (
-                <React.Fragment key={idx}>
-                  {line}
-                  <br />
-                </React.Fragment>
-              ))}
-            </p>
+
+            <div className="step-prev-next-button">
+              {shouldShowPrevButton() && (
+                <button onClick={handlePrevStep} className="prev-step-button">
+                  &lt; 이전 단계
+                </button>
+              )}
+              {shouldShowNextButton() && (
+                <button
+                  onClick={handleNextButtonClick}
+                  className="next-step-button"
+                >
+                  {isStep7_2() ? "완성 >" : "다음 단계 >"}
+                </button>
+              )}
+            </div>
           </div>
         )}
       </div>

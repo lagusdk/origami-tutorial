@@ -10,16 +10,16 @@ const StepIndicator: React.FC<StepIndicatorProps> = ({
   currentStep,
   totalSteps,
 }) => {
-  const stepCount = totalSteps - 1;
+  const stepCount = totalSteps;
 
   const stepColors = [
-    "#f87171", // 빨간색
-    "#facc15", // 노란색
-    "#34d399", // 초록색
-    "#60a5fa", // 파란색
-    "#34d399", // 초록색
-    "#facc15", // 노란색
-    "#f87171", // 빨간색
+    "#EA0047", // 빨간색
+    "#FFb43a", // 노란색
+    "#47c720", // 초록색
+    "#379fff", // 파란색
+    "#EA0047", // 빨간색
+    "#FFb43a", // 노란색
+    "#47c720", // 초록색
   ];
 
   return (

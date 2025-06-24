@@ -1,11 +1,14 @@
 .bird-decoration {
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   background: white;
   padding: 20px;
   box-sizing: border-box;
   background-image: url("/assets/BirdDecoration-Background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .bird-header {
@@ -119,43 +122,43 @@
 }
 
 /* 모달 스타일 */
-.modal-overlay {
+/* .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(30, 30, 30, 0.6); /* 좀 더 어두운 반투명 배경 */
+  background-color: rgba(30, 30, 30, 0.6); 
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
-}
-
+  z-index: 9999 !important;
+} */
+/* 
 .modal-content {
-  background: #fff; /* 흰색 배경 */
+  background: #fff; 
   width: 90%;
   max-width: 500px;
   border-radius: 14px;
   padding: 2.5rem 2rem 2rem 2rem;
   box-sizing: border-box;
   text-align: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* 좀 더 부드러운 그림자 */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); 
   color: #222;
-}
-
+} */
+/* 
 .modal-title {
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: #2c3e50; /* 짙은 청색 계열 */
+  color: #2c3e50; 
 }
 
 .modal-subtitle {
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #34495e; /* 중간 톤 청색 */
+  color: #34495e; 
 }
 
 .modal-description {
@@ -211,4 +214,4 @@
 
 .modal-button.next:hover {
   background-color: #69ae81;
-}
+} */

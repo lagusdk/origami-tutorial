@@ -8,8 +8,8 @@ import ScanLoading from "./pages/ScanLoading";
 
 function App() {
   const [currentPage, setCurrentPage] = useState<
-    "welcome" | "tutorial" | "decorate" | "loading"
-  >("welcome");
+    "title" | "tutorial" | "decorate" | "loading"
+  >("title");
 
   const clickSound = useMemo(
     () => new Audio("/assets/sounds/userinterface-32114.mp3"),
@@ -69,7 +69,7 @@ function App() {
 
   return (
     <div className="app-container">
-      {currentPage === "welcome" && (
+      {currentPage === "title" && (
         <WelcomeScreen onStart={() => setCurrentPage("tutorial")} />
       )}
       {currentPage === "tutorial" && (

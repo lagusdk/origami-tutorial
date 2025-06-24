@@ -5,15 +5,12 @@ import "../styles/StepContent.css";
 
 interface StepContentProps {
   stepData: {
-    // objFile: string | null;
-    // mtlFile: string;
-    // fbxFile?: string;
     glbFile: string;
-    diagramFile: string | null;
+    planFile: string | null;
     description: string;
     title: string;
   };
-  showDiagram: boolean;
+  showPlan: boolean;
   hasSubSteps?: boolean;
   currentSubStep?: number;
   subStepCount?: number;
@@ -24,7 +21,6 @@ interface StepContentProps {
 
 const StepContent: React.FC<StepContentProps> = ({
   stepData,
-  showDiagram,
   hasSubSteps,
   currentSubStep = 0,
   subStepCount = 0,
@@ -42,14 +38,19 @@ const StepContent: React.FC<StepContentProps> = ({
 
   return (
     <div className="step-content">
+      {stepData.planFile && (
+        <div className="plan-fixed-banner">
+          평면도
+          <img src={stepData.planFile} alt="접기 도면" className="plan-image" />
+        </div>
+      )}
+
       {/* 3D 뷰어는 항상 표시 */}
       <div className="model-viewer-container">
-        {/* <OBJMTLViewer objPath={stepData.objFile} mtlPath={stepData.mtlFile} /> */}
         <GLBViewer
           glbPath={stepData.glbFile}
           stepIndex={currentStep.mainStep}
         />
-
         {/* 서브스텝 네비게이션 화살표 */}
         {hasSubSteps && (
           <>
@@ -70,17 +71,6 @@ const StepContent: React.FC<StepContentProps> = ({
               </button>
             )}
           </>
-        )}
-
-        {/* 도면 팝업 (showDiagram이 true일 때만 표시) */}
-        {showDiagram && stepData.diagramFile && (
-          <div className="diagram-popup">
-            <img
-              src={stepData.diagramFile}
-              alt={`${stepData.title} 도면`}
-              className="diagram-image"
-            />
-          </div>
         )}
       </div>
 

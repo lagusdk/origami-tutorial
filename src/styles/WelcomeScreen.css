@@ -1,8 +1,8 @@
 .welcome-screen {
-  min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+
+  min-height: 100vh;
+
   background-image: url("/assets/FoldingBirding-Background.png");
   background-size: cover;
   background-position: center;
@@ -10,40 +10,71 @@
   position: relative;
 }
 
-.welcome-content {
-  text-align: center;
-  position: relative;
+/* welcome 단계일 때 */
+.welcome-screen.title-stage {
+  background-image: url("/assets/FoldingBirding-Background-Title.png");
+}
+
+/* info 단계일 때 */
+.welcome-screen.onboarding-stage {
+  justify-content: center;
+  background-image: url("/assets/FoldingBirding-Background-Onboarding.png");
+}
+
+.welcome-content.title-stage {
+  padding-left: 6rem;
   z-index: 1;
+}
+
+.welcome-content.onboarding-stage {
+  text-align: center;
+  z-index: 1;
+}
+
+.logo-container {
+  position: absolute;
+  top: 8rem;
 }
 
 .logo {
   object-fit: contain;
-  transform: scale(0.75);
-  filter: drop-shadow(-10px -10px 2px rgba(0, 0, 0, 1));
+  transform: scale(0.9);
+  transform-origin: left top;
+}
+
+.intro-section {
+  position: absolute;
+  bottom: 8rem;
 }
 
 .description {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   color: white;
 }
 
 .start-button {
-  background-color: #408e1c;
-  color: white;
-  padding: 1rem 7.5rem;
-  border-radius: 0.5rem;
-  font-size: 2rem;
-  border: 0.2rem solid white;
+  background-color: white;
+  padding: 0.8rem 4rem;
+  border-radius: 0.75rem;
+  font-size: 1.75rem;
+  border: none;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  position: relative;
   overflow: hidden;
 }
 
+.gradient-text {
+  background: linear-gradient(to bottom, #ff9e02, #ffbe56);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+}
+
 .start-button:hover {
-  background-color: #1c8e70;
   transform: translateY(-2px);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -73,33 +104,66 @@
   transform: scale(1);
 }
 
-.bird-image {
-  width: 400px;
-  margin: 20px 0;
-}
-
 .main-description {
-  font-size: 4em;
+  font-size: 2.5em;
   text-align: center;
   margin-bottom: 0;
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.1rem;
+
+  padding-top: 18rem;
 }
 
 .sub-description {
-  font-size: 1.5em;
+  font-size: 1.3em;
   text-align: center;
   line-height: 1.5;
+  padding-top: 1.2rem;
+  padding-bottom: 2.4rem;
   color: white;
+  letter-spacing: 0.1rem;
+}
+
+.sub-description2 {
+  font-weight: 600;
 }
 
 .next-button {
-  font-size: 2rem;
+  font-size: 1.6rem;
   cursor: pointer;
-  background-color: transparent;
+  background-color: #3d2500;
   color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
+  padding: 1rem 3rem;
+
+  border-radius: 0.75rem;
   border: none;
+  letter-spacing: 0.2rem;
+  font-weight: 800;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease, color 0.2s ease;
+}
+
+.next-button::before {
+  content: "";
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  transition: left 0.4s ease;
+  z-index: 0;
+}
+
+.next-button:hover::before {
+  left: 0;
+}
+
+.next-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.next-button:active {
+  transform: translateY(0);
 }
 
 /* iPad Pro 11" 비율에 맞는 반응형 조정 */
@@ -117,9 +181,4 @@
   .title {
     font-size: 2rem;
   }
-}
-
-.bird-3d-container {
-  width: 300px;
-  height: 300px;
 }
