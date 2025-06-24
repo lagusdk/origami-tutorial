@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/BirdDecoration.css";
+import GLBViewer from "../components/GLBViewer-copy";
 
 interface BirdDecorationProps {
   onNext: () => void; // 다음 페이지 이동 콜백
@@ -108,6 +109,10 @@ const BirdDecoration: React.FC<BirdDecorationProps> = ({ onNext }) => {
                 </button>
               </>
             )}
+
+            {/* <div className="bird-3d-container">
+              <GLBViewer glbPath="/assets/glb/welcome-bird.glb" />
+            </div> */}
           </div>
         </div>
       )}
