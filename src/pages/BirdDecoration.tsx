@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/BirdDecoration.css";
-import GLBViewer from "../components/GLBViewer-copy";
+// import GLBViewer from "../components/GLBViewer-copy";
 
 interface BirdDecorationProps {
   onNext: () => void; // 다음 페이지 이동 콜백
