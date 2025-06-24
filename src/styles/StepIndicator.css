@@ -4,13 +4,13 @@
   justify-content: center;
   gap: 1.2rem;
   margin-bottom: 1rem;
-  margin-right: -1.5rem;
-  padding-top: 1.5rem;
+  margin-right: -1.75rem;
+  padding-top: 2.75rem;
 }
 
 .step-dot {
-  width: 0.6rem;
-  height: 0.6rem;
+  width: 0.7rem;
+  height: 0.7rem;
   border-radius: 50%;
   background-color: #ffffff;
   transition: all 0.3s ease;

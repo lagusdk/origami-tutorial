@@ -40,7 +40,7 @@ const StepContent: React.FC<StepContentProps> = ({
     <div className="step-content">
       {stepData.planFile && (
         <div className="plan-fixed-banner">
-          평면도
+          <span>평면도</span>
           <img src={stepData.planFile} alt="접기 도면" className="plan-image" />
         </div>
       )}
