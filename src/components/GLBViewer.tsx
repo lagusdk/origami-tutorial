@@ -38,9 +38,6 @@ const GLBModel: React.FC<{
         const object = gltf.scene;
 
         // 중심 계산
-        // const box = new THREE.Box3().setFromObject(object);
-        // const center = box.getCenter(new THREE.Vector3());
-
         const box = new THREE.Box3().setFromObject(object);
         const sphere = box.getBoundingSphere(new THREE.Sphere());
 
