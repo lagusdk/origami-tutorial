@@ -1,14 +1,53 @@
-.scan-loading-container:not(.first-page) {
-  background-image: url("/assets/ScanLoading-Background.png");
+@font-face {
+  font-family: "Ownglyph_ryurue-Rg";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/Ownglyph_ryurue-Rg.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 첫 페이지 스타일 */
+.scan-loading-container.first-page {
+  background-image: url("/assets/ScanLoading-Background-First.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  color: #ffffff;
+  font-family: "NoonnuBasicGothicRegular";
+}
+
+/* 일반 텍스트 페이지 스타일 */
+.scan-loading-container:not(.first-page):not(.modal-page) {
+  background-image: url("/assets/ScanLoading-Background-Text.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #372800;
+}
+
+/* 모달 페이지 스타일 */
+.scan-loading-container.modal-page {
+  background-image: url("/assets/ScanLoading-Background-Modal.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #2c3e50;
+  font-family: "NoonnuBasicGothicRegular";
+}
+
+.scan-loading-container.final-scan-page {
+  background-image: url("/assets/ScanLoading-Background-Last.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #372800;
+  font-family: "Ownglyph_ryurue-Rg";
+  z-index: 30;
 }
 
 .scan-loading-container {
   width: 100vw;
   height: 100vh;
-  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,19 +55,67 @@
 
 .scene-content {
   text-align: center;
-  max-width: 800px;
   padding: 20px;
-  color: #2c3e50;
   z-index: 10;
 }
 
-.scene-content p {
-  font-size: 1.5rem;
-  line-height: 2.2rem;
-  opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
-  animation-delay: 0.5s;
-  margin-bottom: 1.2rem;
+.first-page .scene-content {
+  margin-top: 12rem;
+}
+
+/* 텍스트 요소 간격 조정 */
+.scene-element {
+  margin-bottom: 2rem; /* 요소들 사이 간격 */
+}
+
+/* 첫 페이지 텍스트 스타일 */
+.first-page .scene-element p {
+  font-size: 2rem;
+  line-height: 3rem;
+  color: #ffffff !important;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem; /* 줄 간격 */
+  font-family: "NoonnuBasicGothicRegular" !important;
+}
+
+/* 일반 텍스트 페이지 스타일 */
+.scene-element.text p {
+  font-size: 2.2rem;
+  line-height: 2.4rem; /* 한 lines[] 내 줄 간격 */
+  color: #372800;
+  margin-bottom: 0.5rem; /* 줄 간격 */
+  font-family: "Ownglyph_ryurue-Rg";
+  font-weight: bold;
+}
+
+.scene-element.text {
+  margin-bottom: 4.8rem; /* lines[] 사이 간격 */
+}
+
+.final-line-accent {
+  font-size: 3rem !important;
+  color: #00611a !important;
+}
+
+/* 모달 페이지 텍스트 스타일 */
+.scene-element.modal {
+  width: 40rem;
+}
+
+/* 모달 페이지 텍스트 스타일 */
+.scene-element.modal p {
+  font-size: 2.2rem;
+  line-height: 2.5rem;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  letter-spacing: 0.2rem;
+}
+
+/* 모달 두 번째 줄 작은 글씨 */
+.scene-element.modal p.modal-second-line {
+  font-size: 1.3rem;
+  color: #555;
 }
 
 .scene-content p.fade-in {
@@ -36,79 +123,68 @@
   animation: fadeIn 1s ease-in forwards;
 }
 
-.scene-content img {
-  width: 100%;
-  max-width: 500px;
-  margin: 20px auto;
-  display: block;
-  opacity: 0;
-  z-index: 10;
-
-  animation: fadeIn 1s ease-in forwards;
+/* 첫 페이지 버튼 스타일 */
+.first-page .scene-button {
+  background-color: #3d2600;
+  padding: 1rem 4rem;
+  font-size: 1.5rem;
+  color: white;
+  font-family: "NoonnuBasicGothicRegular";
+  margin-top: 6rem;
 }
 
+/* 모달 페이지 버튼 스타일 */
+.scene-element.modal .scene-button {
+  background-color: #f59e0b;
+  padding: 1rem 5rem;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  color: white;
+  font-family: "NoonnuBasicGothicRegular";
+}
+
+/* 공통 버튼 스타일 */
 .scene-button {
-  margin-top: 30px;
-  padding: 12px 24px;
+  padding: 1rem 4rem;
   font-size: 1.2rem;
   border: none;
-  border-radius: 8px;
-  background-color: #247f46;
-  color: white;
+  border-radius: 12px;
   cursor: pointer;
-  z-index: 10;
-
+  z-index: 20;
   animation: fadeIn 1s ease-in forwards;
 }
 
 .scene-button:hover {
-  background-color: #247f46;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
 }
 
 /* 줄간격 줄이기 */
 p.compress span {
   display: block;
-  line-height: 1.3rem;
+  line-height: 4.8rem;
 }
 
 p.tighten span {
   display: block;
-  line-height: 1.3rem;
+  line-height: 1.2rem;
+}
+
+p.tighten.final-scan-page span {
+  line-height: 2.4rem;
 }
 
 /* 모달창 스타일 */
 .modal {
-  background-color: #fffefb;
+  background-color: white;
   padding: 40px;
   border-radius: 12px;
   margin-top: 20px;
-  color: #2c3e50;
   z-index: 10;
   width: 20rem;
-}
-
-/* 모달 타입 페이지에 적용될 검은색 반투명 레이어 */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* 모달 내용 스타일 강조 */
-.scene-content.modal {
-  position: relative;
-  z-index: 20;
-  background-color: #fffefb;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  font-family: "NoonnuBasicGothicRegular";
 }
 
 /* 애니메이션 */
@@ -120,5 +196,18 @@ p.tighten span {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.fade-out {
+  animation: fadeOut 1s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }

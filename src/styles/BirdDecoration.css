@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "NoonnuBasicGothicRegular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noon-2410@1.0/NoonnuBasicGothicRegular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .bird-decoration.deco-stage {
   height: 100%;
   display: flex;
@@ -8,6 +16,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  font-family: "NoonnuBasicGothicRegular";
 }
 
 .bird-header {
@@ -99,6 +108,7 @@
   transition: background-color 0.3s;
   align-self: center;
   margin-bottom: 1rem;
+  font-family: "NoonnuBasicGothicRegular";
 }
 
 .bird-complete-button:hover {
@@ -119,6 +129,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  font-family: "NoonnuBasicGothicRegular";
 }
 
 .bird-save-content {

@@ -44,13 +44,12 @@ const BirdDecoration: React.FC<BirdDecorationProps> = ({ onNext }) => {
             <div className="bird-textbox">
               <p className="bird-subtitle">꾸미기 전 유의사항</p>
               <p className="bird-text-content">
-                <p>
-                  <strong>
-                    <span className="colored-text1">
-                      1. 색이 그대로 반영되지 않을 수 있어요
-                    </span>
-                  </strong>
-                </p>
+                <strong>
+                  <span className="colored-text1">
+                    1. 색이 그대로 반영되지 않을 수 있어요
+                  </span>
+                </strong>
+
                 <p>
                   카메라로 촬영한 이미지를 기반으로 3D 모델에 색을 입히는
                   과정에서는 조명, 해상도, 인식 정확도에 따라 색이 조금 다르게
@@ -59,13 +58,11 @@ const BirdDecoration: React.FC<BirdDecorationProps> = ({ onNext }) => {
                 </p>
               </p>
               <p className="bird-text-content">
-                <p>
-                  <strong>
-                    <span className="colored-text3">
-                      2. 머리 부분은 인식이 어려울 수 있어요
-                    </span>
-                  </strong>
-                </p>
+                <strong>
+                  <span className="colored-text3">
+                    2. 머리 부분은 인식이 어려울 수 있어요
+                  </span>
+                </strong>
                 <p>
                   스캔 과정에서 새의 머리는 구조상 잘 인식되지 않을 수 있어요.
                   그래서 몸통과 날개 중심으로 꾸며주는 것이 가장 효과적입니다.
@@ -73,13 +70,11 @@ const BirdDecoration: React.FC<BirdDecorationProps> = ({ onNext }) => {
               </p>
 
               <p className="bird-text-content">
-                <p>
-                  <strong>
-                    <span className="colored-text2">
-                      3. 안쪽까지 꼼꼼히 색칠해 주세요
-                    </span>
-                  </strong>
-                </p>
+                <strong>
+                  <span className="colored-text2">
+                    3. 안쪽까지 꼼꼼히 색칠해 주세요
+                  </span>
+                </strong>
                 <p>
                   날개의 바깥뿐 아니라 날개 안쪽까지 골고루 색칠해 주시면, 3D
                   모델에서도 더 자연스럽고 풍부한 텍스처로 표현돼요.
