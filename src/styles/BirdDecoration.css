@@ -21,7 +21,7 @@
 }
 
 .bird-title {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   font-weight: 700;
   color: #2c3e50;
   margin: 0;
@@ -29,66 +29,55 @@
   white-space: pre-line;
 }
 
+.bird-subtitle {
+  font-size: 1.5rem;
+  color: black;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  padding-top: 1rem;
+}
+
 .colored-text1 {
-  color: #ff5680;
-  display: inline-block;
-  transform: translateY(-5px) rotate(-5deg);
-  transform-origin: center center;
+  color: #ea0047;
 }
 
 .colored-text2 {
   color: #379fff;
-  display: inline-block;
-  transform: rotate(10deg);
-  transform-origin: center center;
 }
 
 .colored-text3 {
-  color: #deaa00;
-}
-
-.bird-bottom-container {
-  position: fixed; /* 화면에 고정 */
-  bottom: 20px; /* 하단에서 20px 위로 */
-  left: 50%; /* 가로 중앙 정렬 */
-  transform: translateX(-50%); /* 정확한 중앙 배치 */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px; /* 요소 사이 간격 */
-  width: 100%;
-  max-width: 600px; /* 최대 너비 설정 (선택사항) */
-  padding-bottom: 2rem;
-  box-sizing: border-box;
-}
-
-.bird-subtitle {
-  font-size: 1.5rem;
-  color: #247f46;
-  margin: 0;
-  text-align: center;
+  color: #ff9f02;
 }
 
 .bird-main-content {
-  flex-grow: 1;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  width: 990px;
+  margin: 0 auto;
+  border-radius: 32px;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: relative;
 }
 
 .bird-textbox {
   width: 100%;
-  max-width: 600px; /* 적절한 최대 너비 설정 */
-  border-radius: 8px; /* 둥근 모서리 */
+  max-width: 920px;
   margin: 0 auto; /* 가운데 정렬 */
-  color: #333;
+  color: black;
 }
 
 .bird-text-content {
   text-align: left;
   line-height: 1.6;
   font-size: 1rem;
-  color: #666666;
+  padding: 0.8rem 2.4rem;
+  border-radius: 32px;
+  background-color: white;
+
+  color: black;
 }
 
 .bird-text-content p {
@@ -100,118 +89,23 @@
   color: #333;
 }
 
-.bird-footer {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-}
-
 .bird-complete-button {
-  padding: 12px 30px;
-  background-color: #247f46; /* 버튼 색상 */
+  padding: 1rem 4rem;
+  background-color: #3d2600; /* 버튼 색상 */
   color: white;
   border: none;
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   cursor: pointer;
   transition: background-color 0.3s;
+  align-self: center;
+  margin-bottom: 1rem;
 }
 
 .bird-complete-button:hover {
-  background-color: #45a049; /* 호버 시 색상 변경 */
-}
-
-/* 모달 스타일 */
-/* .modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(30, 30, 30, 0.6); 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999 !important;
-} */
-/* 
-.modal-content {
-  background: #fff; 
-  width: 90%;
-  max-width: 500px;
-  border-radius: 14px;
-  padding: 2.5rem 2rem 2rem 2rem;
-  box-sizing: border-box;
-  text-align: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); 
-  color: #222;
-} */
-/* 
-.modal-title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: #2c3e50; 
-}
-
-.modal-subtitle {
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: #34495e; 
-}
-
-.modal-description {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: #555;
-  line-height: 1.5;
-}
-
-.modal-buttons {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-}
-
-.modal-button {
-  flex: 1;
-  padding: 12px 0;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.25s ease, color 0.25s ease;
-  user-select: none;
-}
-
-.modal-button.cancel {
-  background-color: #247f46;
   color: white;
+  transform: scale(1.05); /* 5% 커짐 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 약간 그림자 추가 */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
-
-.modal-button.cancel:hover {
-  background-color: #69ae81;
-}
-.modal-button.confirm {
-  background-color: #f59e08;
-  color: white;
-}
-
-.modal-button.confirm:hover {
-  background-color: #ddaa52;
-}
-
-.modal-button.next {
-  background-color: #247f46;
-  color: white;
-  width: 100%;
-  font-size: 1.2rem;
-  padding: 14px 0;
-  border-radius: 8px;
-}
-
-.modal-button.next:hover {
-  background-color: #69ae81;
-} */
