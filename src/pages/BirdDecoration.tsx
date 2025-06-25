@@ -145,7 +145,7 @@ const BirdDecoration: React.FC<BirdDecorationProps> = ({ onNext }) => {
           </div>
           <h2>나만의 새를 저장하고 있어요!</h2>
           <p>그동안 FOLDING BIRDING 팀의 이야기를 들려드릴게요</p>
-          <button className="modal-button next" onClick={onNext}>
+          <button className="ok-button next" onClick={onNext}>
             좋아요
           </button>
         </div>

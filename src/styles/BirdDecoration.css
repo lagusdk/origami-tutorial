@@ -160,8 +160,11 @@
   margin-bottom: 4rem;
 }
 
-.bird-save-content .modal-button.next {
+.bird-save-content .ok-button.next {
   background-color: #ffb43a;
+  font-family: "NoonnuBasicGothicRegular";
+  border: none;
+  color: white;
   width: 15rem;
   padding: 1rem 3rem;
   font-size: 1.8rem;
@@ -169,7 +172,7 @@
   margin-bottom: 4rem;
 }
 
-.bird-save-content .modal-button.next:hover {
+.bird-save-content .ok-button.next:hover {
   color: white;
   transform: scale(1.05); /* 5% 커짐 */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 약간 그림자 추가 */

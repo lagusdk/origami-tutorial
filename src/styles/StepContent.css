@@ -8,7 +8,7 @@
 
 .model-viewer-container {
   width: 950px;
-  height: 375px; /* 적절한 높이 설정 */
+  height: 360px; /* 적절한 높이 설정 */
   font-family: "NoonnuBasicGothicRegular";
 
   /* 둥근 모서리와 테두리 */

@@ -27,7 +27,7 @@
 
 .step-title {
   font-weight: bold;
-  margin-top: 2.4rem;
+  margin-top: 1rem;
   margin-bottom: -0rem;
   transform-origin: right top;
   font-size: 3rem;
@@ -109,7 +109,7 @@
 /* 하단 고정 버튼 래퍼 */
 .step-prev-next-button {
   position: absolute;
-  bottom: 8.5rem;
+  bottom: 7rem;
 
   width: 100%;
   display: flex;
