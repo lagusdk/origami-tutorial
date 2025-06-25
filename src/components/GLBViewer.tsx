@@ -22,8 +22,10 @@ const GLBModel: React.FC<{
 }> = ({ path, setTarget, stepIndex }) => {
   const getobjectPosition = (): number => {
     switch (true) {
-      case stepIndex <= 1:
+      case stepIndex == 0:
         return 0;
+      case stepIndex == 1:
+        return -0.3;
       case stepIndex == 2:
         return -0.3;
       case stepIndex == 3:
