@@ -109,7 +109,9 @@
 /* 하단 고정 버튼 래퍼 */
 .step-prev-next-button {
   position: absolute;
-  bottom: 7rem;
+
+  bottom: 6.5rem;
+  /* 7rem ok */
 
   width: 100%;
   display: flex;
