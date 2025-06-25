@@ -18,7 +18,23 @@ function Loader() {
 const GLBModel: React.FC<{
   path: string;
   setTarget: (target: [number, number, number]) => void;
-}> = ({ path, setTarget }) => {
+  stepIndex: number;
+}> = ({ path, setTarget, stepIndex }) => {
+  const getobjectPosition = (): number => {
+    switch (true) {
+      case stepIndex <= 1:
+        return 0;
+      case stepIndex == 2:
+        return -0.3;
+      case stepIndex == 3:
+        return -0.15;
+      case stepIndex == 4:
+        return -0.3;
+      default:
+        return 0;
+    }
+  };
+
   const [model, setModel] = useState<THREE.Group | null>(null);
   const mixerRef = useRef<THREE.AnimationMixer | null>(null);
 
@@ -46,6 +62,8 @@ const GLBModel: React.FC<{
 
         // targetCenter를 상위에 전달
         setTarget([0, 0, 0]); // 중심으로 이동한 후 기준점은 항상 (0,0,0)
+
+        object.position.z += getobjectPosition();
 
         object.rotation.set(Math.PI, 0, 0);
 
@@ -122,7 +140,11 @@ const GLBViewer: React.FC<GLBViewerProps> = ({ glbPath, stepIndex = 0 }) => {
         <pointLight position={[0, 0, 10]} intensity={0.5} />
 
         <Suspense fallback={<Loader />}>
-          <GLBModel path={glbPath} setTarget={setTargetCenter} />
+          <GLBModel
+            path={glbPath}
+            setTarget={setTargetCenter}
+            stepIndex={stepIndex}
+          />
           <OrbitControls
             enablePan={true}
             enableZoom={true}
